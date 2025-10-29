@@ -1,0 +1,35 @@
+# Instalação do Servidor
+
+# Rede
+- Alterar o adaptador de rede para modo Bridge
+
+## IP
+O Comando ip addr Identifica a network que o computador está.
+
+Observe o nome da interface (por exemplo, ens33 ou eth0) que você deseja configurar.
+
+Editar o arquivo de configuração do Netplan:
+Abra o arquivo YAML com privilégios de administrador. 
+O nome do arquivo pode variar, mas geralmente é algo como 50-cloud-init.yaml ou 01-netcfg.yaml
+
+- Comando para editar o arquivo de ip:
+sudo nano /etc/netplan/SUBSTITUIR AQUI PELO NOME DO ARQUIVO QUE VOCÊ TEM EM SUA MAQUINA
+
+- Aparecerá algo como:
+    network:
+      ethernets:
+        ens33:
+          dhcp4: no
+          addresses: [192.168.1.100/24]
+          gateway4: 192.168.1.1
+          nameservers:
+            addresses: [8.8.8.8, 8.8.4.4]
+      version: 2
+
+- Depois de Editar Aplique as Configurações:
+sudo netplan apply
+
+## Update
+O comando apt-get update atualiza a lista de pacotes e programas que podem ser instalados na máquina
+## Upgrade
+O comando apt-get upgrade atualiza o sistema e baixa e instala atualizações de pacotes e dos programas da máquina.
