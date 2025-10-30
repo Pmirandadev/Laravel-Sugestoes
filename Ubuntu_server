@@ -33,3 +33,14 @@ sudo netplan apply
 O comando apt-get update atualiza a lista de pacotes e programas que podem ser instalados na máquina
 ## Upgrade
 O comando apt-get upgrade atualiza o sistema e baixa e instala atualizações de pacotes e dos programas da máquina.
+
+## Instalar o Apache2
+- sudo apt install apache2  // Instalar o servidor Web Apache
+- sudo systemctl status apache2 //Checar se está funcional
+
+## Instalar o mysql
+- sudo apt install mysql-server     
+- sudo mysql_secure_installation    // Instalação com inserção de senha para segurança
+
+- sudo systemctl status mysql  // Verificar se está funcional
+- sudo mysql -u root -p  // para acessar o prompt Mysql como Root com a senha configurada
