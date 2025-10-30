@@ -4,10 +4,10 @@ desde a criação de um banco de dados até o projeto em si em Laravel.
 
 # Instancia Utilizada para o servidor
 - Ubuntu 24.04.2 live Server amd64
-- Nome do servidor: svrSgst
+- Nome do servidor: svrsugestoes
 - Memoria Utilizada - 4096 Mb
 - Processadores - 4
-- Tamanho do Disco - 100 GB
+- Tamanho do Disco - 50 GB
 
 # Banco de dados
 - Mysql
